@@ -15,6 +15,6 @@ community.vmware.vmware_guest:
       facts: {
         infra_type: "PrivateCloud",
         infra_bucket: "Compute",
-        device_type: "VM"
+        device_type: "VMz"
       }
     }
