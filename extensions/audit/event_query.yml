@@ -2,22 +2,6 @@
 ####
 # Catch all query
 ####
-community.vmware.vmware_guest:
-  query: >-
-    .vmware_guest | values[] | values[] | values[] | {
-      name: (.moid + "-" + .instance_uuid),
-      canonical_facts: {
-        ansible_vmware_instance_uuid: .instance_uuid,
-        ansible_vmware_bios_uuid: .hw_product_uuid,
-        ansible_vmware_moid: .moid,
-        ansible_vmware_esxi: .hw_esxi_host
-      },
-      facts: {
-        infra_type: "PrivateCloud",
-        infra_bucket: "Compute",
-        device_type: "VM"
-      }
-    }
 
 community.vmware.*:
   query: >-
