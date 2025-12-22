@@ -694,9 +694,7 @@ community.vmware.vmware_guest:
     .instance | select(. != null) | {
       name: .moid,
       canonical_facts: {
-        moid: .moid,
-        instance_uuid: .instance_uuid,
-        bios_uuid: .hw_product_uuid
+        moid: .moid
       },
       facts: {
         infra_type: "jonnyfiveiq",
