@@ -1,75 +1,61 @@
 ---
-vmware.vmware.cluster:
+community.vmware.vcenter_standard_key_provider:
   query: >-
-    .cluster | select(. != null) | {
-      name: .moid,
+    .key_provider_clusters[] | {
+      name: .key_id,
       canonical_facts: {
-        moid: .moid
+        id: .key_id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "community.vmwarey",
         infra_bucket: "Compute",
-        device_type: "Cluster"
+        device_type: "Resource"
       }
     }
 
-vmware.vmware.cluster_dpm:
+community.vmware.vmware_about_info:
   query: >-
-    .cluster | select(. != null) | {
-      name: .moid,
+    . | select(. != null) | {
+      name: .instance_uuid,
       canonical_facts: {
-        moid: .moid
+        instance_uuid: .instance_uuid
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "community.vmwarey",
         infra_bucket: "Compute",
-        device_type: "Cluster"
+        device_type: "VM"
       }
     }
 
-vmware.vmware.cluster_drs:
+community.vmware.vmware_category:
   query: >-
-    .cluster | select(. != null) | {
-      name: .moid,
+    .category_results | select(. != null) | {
+      name: .category_id,
       canonical_facts: {
-        moid: .moid
+        id: .category_id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "community.vmwarey",
         infra_bucket: "Compute",
-        device_type: "Cluster"
+        device_type: "VM"
       }
     }
 
-vmware.vmware.cluster_drs_recommendations:
+community.vmware.vmware_category_info:
   query: >-
-    .cluster | select(. != null) | {
-      name: .moid,
+    .tag_category_info[] | {
+      name: .category_id,
       canonical_facts: {
-        moid: .moid
+        id: .category_id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "community.vmwarey",
         infra_bucket: "Compute",
-        device_type: "Cluster"
+        device_type: "VM"
       }
     }
 
-vmware.vmware.cluster_ha:
-  query: >-
-    .cluster | select(. != null) | {
-      name: .moid,
-      canonical_facts: {
-        moid: .moid
-      },
-      facts: {
-        infra_type: "PrivateCloud",
-        infra_bucket: "Compute",
-        device_type: "Cluster"
-      }
-    }
-
-vmware.vmware.cluster_info:
+community.vmware.vmware_cluster_info:
   query: >-
     .clusters | select(. != null) | {
       name: .moid,
@@ -77,155 +63,169 @@ vmware.vmware.cluster_info:
         moid: .moid
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "community.vmwarey",
         infra_bucket: "Compute",
-        device_type: "Cluster"
+        device_type: "VM"
       }
     }
 
-vmware.vmware.cluster_vcls:
+community.vmware.vmware_content_deploy_ovf_template:
   query: >-
-    .cluster | select(. != null) | {
+    .vm_deploy_info | select(. != null) | {
+      name: .vm_id,
+      canonical_facts: {
+        id: .vm_id
+      },
+      facts: {
+        infra_type: "community.vmwarey",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_content_deploy_template:
+  query: >-
+    .vm_deploy_info | select(. != null) | {
+      name: .vm_id,
+      canonical_facts: {
+        id: .vm_id
+      },
+      facts: {
+        infra_type: "community.vmwarey",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_content_library_info:
+  query: >-
+    .content_lib_details[] | {
+      name: .library_id,
+      canonical_facts: {
+        id: .library_id
+      },
+      facts: {
+        infra_type: "community.vmwarey",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_content_library_manager:
+  query: >-
+    .content_library_info | select(. != null) | {
+      name: .library_id,
+      canonical_facts: {
+        id: .library_id
+      },
+      facts: {
+        infra_type: "community.vmwarey",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_datacenter_info:
+  query: >-
+    .datacenter_info[] | {
       name: .moid,
       canonical_facts: {
         moid: .moid
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "community.vmwarey",
         infra_bucket: "Compute",
-        device_type: "Cluster"
+        device_type: "VM"
       }
     }
 
-vmware.vmware.content_library_item_info:
+community.vmware.vmware_datastore_info:
   query: >-
-    .library_item_info[] | {
-      name: .id,
+    .datastores[] | {
+      name: .vmfs_uuid,
       canonical_facts: {
-        id: .id
+        id: .vmfs_uuid
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "community.vmwarey",
         infra_bucket: "Compute",
-        device_type: "Resource"
+        device_type: "VM"
       }
     }
 
-vmware.vmware.content_template:
+community.vmware.vmware_dvswitch:
   query: >-
-    .template_info | select(. != null) | {
-      name: .template_id,
+    . | select(. != null) | {
+      name: .net_flow_observation_domain_id,
       canonical_facts: {
-        id: .template_id
+        id: .net_flow_observation_domain_id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "community.vmwarey",
         infra_bucket: "Compute",
-        device_type: "Resource"
+        device_type: "VM"
       }
     }
 
-vmware.vmware.deploy_content_library_ovf:
+community.vmware.vmware_dvswitch_info:
   query: >-
-    .vm | select(. != null) | {
+    .distributed_virtual_switches[] | {
+      name: .uuid,
+      canonical_facts: {
+        uuid: .uuid
+      },
+      facts: {
+        infra_type: "community.vmwarey",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_folder_info:
+  query: >-
+    .flat_folder_info[] | {
       name: .moid,
       canonical_facts: {
         moid: .moid
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "community.vmwarey",
         infra_bucket: "Compute",
-        device_type: "Resource"
+        device_type: "VM"
       }
     }
 
-vmware.vmware.deploy_content_library_template:
+community.vmware.vmware_guest_disk:
   query: >-
-    .vm | select(. != null) | {
-      name: .moid,
+    .disk_data | select(. != null) | {
+      name: .backing_uuid,
       canonical_facts: {
-        moid: .moid
+        id: .backing_uuid
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "community.vmwarey",
         infra_bucket: "Compute",
-        device_type: "Resource"
+        device_type: "VM"
       }
     }
 
-vmware.vmware.deploy_folder_template:
+community.vmware.vmware_guest_disk_info:
   query: >-
-    .vm | select(. != null) | {
-      name: .moid,
+    .guest_disk_info | select(. != null) | {
+      name: .backing_uuid,
       canonical_facts: {
-        moid: .moid
+        id: .backing_uuid
       },
       facts: {
-        infra_type: "PrivateCloud",
-        infra_bucket: "Management",
-        device_type: "Folder"
-      }
-    }
-
-vmware.vmware.esxi_connection:
-  query: >-
-    .host | select(. != null) | {
-      name: .moid,
-      canonical_facts: {
-        moid: .moid
-      },
-      facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "community.vmwarey",
         infra_bucket: "Compute",
-        device_type: "ESXi"
+        device_type: "VM"
       }
     }
 
-vmware.vmware.esxi_host:
+community.vmware.vmware_guest_info:
   query: >-
-    .host | select(. != null) | {
-      name: .moid,
-      canonical_facts: {
-        moid: .moid
-      },
-      facts: {
-        infra_type: "PrivateCloud",
-        infra_bucket: "Compute",
-        device_type: "ESXi"
-      }
-    }
-
-vmware.vmware.esxi_maintenance_mode:
-  query: >-
-    .result | select(. != null) | {
-      name: .moid,
-      canonical_facts: {
-        moid: .moid
-      },
-      facts: {
-        infra_type: "PrivateCloud",
-        infra_bucket: "Compute",
-        device_type: "ESXi"
-      }
-    }
-
-vmware.vmware.folder:
-  query: >-
-    .folder | select(. != null) | {
-      name: .moid,
-      canonical_facts: {
-        moid: .moid
-      },
-      facts: {
-        infra_type: "PrivateCloud",
-        infra_bucket: "Management",
-        device_type: "Folder"
-      }
-    }
-
-vmware.vmware.guest_info:
-  query: >-
-    .guests[] | {
+    .instance | select(. != null) | {
       name: .hw_product_uuid,
       canonical_facts: {
         bios_uuid: .hw_product_uuid,
@@ -233,162 +233,303 @@ vmware.vmware.guest_info:
         moid: .moid
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "community.vmwarey",
         infra_bucket: "Compute",
         device_type: "VM"
       }
     }
 
-vmware.vmware.local_content_library:
+community.vmware.vmware_guest_instant_clone:
   query: >-
-    .library | select(. != null) | {
+    .vm_info | select(. != null) | {
+      name: .instance_uuid,
+      canonical_facts: {
+        instance_uuid: .instance_uuid
+      },
+      facts: {
+        infra_type: "community.vmwarey",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_guest_move:
+  query: >-
+    .instance | select(. != null) | {
+      name: .hw_product_uuid,
+      canonical_facts: {
+        bios_uuid: .hw_product_uuid,
+        instance_uuid: .instance_uuid
+      },
+      facts: {
+        infra_type: "community.vmwarey",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_guest_serial_port:
+  query: >-
+    .serial_port_data | select(. != null) | {
+      name: .serial_port_data,
+      canonical_facts: {
+        id: .serial_port_data
+      },
+      facts: {
+        infra_type: "community.vmwarey",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_guest_snapshot:
+  query: >-
+    .snapshot_results | select(. != null) | {
       name: .id,
       canonical_facts: {
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "community.vmwarey",
         infra_bucket: "Compute",
-        device_type: "Resource"
+        device_type: "VM"
       }
     }
 
-vmware.vmware.subscribed_content_library:
+community.vmware.vmware_guest_snapshot_info:
   query: >-
-    .library | select(. != null) | {
+    .guest_snapshots | select(. != null) | {
       name: .id,
       canonical_facts: {
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "community.vmwarey",
         infra_bucket: "Compute",
-        device_type: "Resource"
+        device_type: "VM"
       }
     }
 
-vmware.vmware.tag_associations:
+community.vmware.vmware_guest_tools_info:
   query: >-
-    .added_tags[] | {
+    .vmtools_info | select(. != null) | {
+      name: .vm_uuid,
+      canonical_facts: {
+        id: .vm_uuid
+      },
+      facts: {
+        infra_type: "community.vmwarey",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_host_facts:
+  query: >-
+    .ansible_facts | select(. != null) | {
+      name: .ansible_uuid,
+      canonical_facts: {
+        id: .ansible_uuid
+      },
+      facts: {
+        infra_type: "community.vmwarey",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_host_logbundle_info:
+  query: >-
+    .manifests[] | {
       name: .id,
       canonical_facts: {
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "community.vmwarey",
         infra_bucket: "Compute",
-        device_type: "Resource"
+        device_type: "VM"
       }
     }
 
-vmware.vmware.tag_categories:
+community.vmware.vmware_local_role_info:
   query: >-
-    .vsphere_tag_categories | select(. != null) | {
+    .local_role_info[] | {
+      name: .role_id,
+      canonical_facts: {
+        id: .role_id
+      },
+      facts: {
+        infra_type: "community.vmwarey",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_local_role_manager:
+  query: >-
+    .privileges[] | {
+      name: .role_id,
+      canonical_facts: {
+        id: .role_id
+      },
+      facts: {
+        infra_type: "community.vmwarey",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_local_user_info:
+  query: >-
+    .local_user_info | select(. != null) | {
+      name: .user_id,
+      canonical_facts: {
+        id: .user_id
+      },
+      facts: {
+        infra_type: "community.vmwarey",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_object_role_permission_info:
+  query: >-
+    .permission_info[] | {
+      name: .role_id,
+      canonical_facts: {
+        id: .role_id
+      },
+      facts: {
+        infra_type: "community.vmwarey",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_tag:
+  query: >-
+    .tag_status | select(. != null) | {
+      name: .tag_id,
+      canonical_facts: {
+        id: .tag_id
+      },
+      facts: {
+        infra_type: "community.vmwarey",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_tag_info:
+  query: >-
+    .tag_facts | select(. != null) | {
+      name: .tag_category_id,
+      canonical_facts: {
+        id: .tag_category_id
+      },
+      facts: {
+        infra_type: "community.vmwarey",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_target_canonical_info:
+  query: >-
+    .scsi_tgt_info | select(. != null) | {
+      name: .target_lun_uuid,
+      canonical_facts: {
+        id: .target_lun_uuid
+      },
+      facts: {
+        infra_type: "community.vmwarey",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_vcenter_settings:
+  query: >-
+    .results | select(. != null) | {
+      name: .runtime_unique_id,
+      canonical_facts: {
+        id: .runtime_unique_id
+      },
+      facts: {
+        infra_type: "community.vmwarey",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_vm_info:
+  query: >-
+    .virtual_machines[] | {
+      name: .uuid,
+      canonical_facts: {
+        uuid: .uuid,
+        moid: .moid
+      },
+      facts: {
+        infra_type: "community.vmwarey",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_vm_shell:
+  query: >-
+    .results | select(. != null) | {
+      name: .uuid,
+      canonical_facts: {
+        uuid: .uuid
+      },
+      facts: {
+        infra_type: "community.vmwarey",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_vm_storage_policy:
+  query: >-
+    .vmware_vm_storage_policy | select(. != null) | {
       name: .id,
       canonical_facts: {
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "community.vmwarey",
         infra_bucket: "Compute",
-        device_type: "Resource"
+        device_type: "VM"
       }
     }
 
-vmware.vmware.tags:
+community.vmware.vmware_vm_storage_policy_info:
   query: >-
-    .vsphere_tags | select(. != null) | {
+    .spbm_profiles[] | {
       name: .id,
       canonical_facts: {
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
-        infra_bucket: "Compute",
-        device_type: "Resource"
-      }
-    }
-
-vmware.vmware.vm:
-  query: >-
-    .vm | select(. != null) | {
-      name: .moid,
-      canonical_facts: {
-        moid: .moid
-      },
-      facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "community.vmwarey",
         infra_bucket: "Compute",
         device_type: "VM"
       }
     }
 
-vmware.vmware.vm_advanced_settings:
+community.vmware.vmware_vm_vm_drs_rule:
   query: >-
-    .vm | select(. != null) | {
-      name: .moid,
+    .result | select(. != null) | {
+      name: .rule_uuid,
       canonical_facts: {
-        moid: .moid
+        id: .rule_uuid
       },
       facts: {
-        infra_type: "PrivateCloud",
-        infra_bucket: "Compute",
-        device_type: "VM"
-      }
-    }
-
-vmware.vmware.vm_apply_customization:
-  query: >-
-    .vm | select(. != null) | {
-      name: .moid,
-      canonical_facts: {
-        moid: .moid
-      },
-      facts: {
-        infra_type: "PrivateCloud",
-        infra_bucket: "Compute",
-        device_type: "VM"
-      }
-    }
-
-vmware.vmware.vm_powerstate:
-  query: >-
-    .vm | select(. != null) | {
-      name: .moid,
-      canonical_facts: {
-        moid: .moid
-      },
-      facts: {
-        infra_type: "PrivateCloud",
-        infra_bucket: "Compute",
-        device_type: "VM"
-      }
-    }
-
-vmware.vmware.vm_resource_info:
-  query: >-
-    .vms[] | {
-      name: .moid,
-      canonical_facts: {
-        moid: .moid
-      },
-      facts: {
-        infra_type: "PrivateCloud",
-        infra_bucket: "Compute",
-        device_type: "VM"
-      }
-    }
-
-vmware.vmware.vm_snapshot:
-  query: >-
-    .vm | select(. != null) | {
-      name: .moid,
-      canonical_facts: {
-        moid: .moid,
-        id: .id
-      },
-      facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "community.vmwarey",
         infra_bucket: "Compute",
         device_type: "VM"
       }
