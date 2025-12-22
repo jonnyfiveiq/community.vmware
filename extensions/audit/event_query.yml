@@ -1,4 +1,88 @@
 ---
+community.vmware.vcenter_domain_user_group_info:
+  query: >-
+    .domain_user_groups[] | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "Resource"
+      }
+    }
+
+community.vmware.vcenter_extension:
+  query: >-
+    . | select(. != null) | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "Resource"
+      }
+    }
+
+community.vmware.vcenter_extension_info:
+  query: >-
+    .extension_info[] | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "Resource"
+      }
+    }
+
+community.vmware.vcenter_folder:
+  query: >-
+    . | select(. != null) | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Management",
+        device_type: "Folder"
+      }
+    }
+
+community.vmware.vcenter_license:
+  query: >-
+    .licenses[] | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "Resource"
+      }
+    }
+
+community.vmware.vcenter_root_password_expiration:
+  query: >-
+    . | select(. != null) | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "Resource"
+      }
+    }
+
 community.vmware.vcenter_standard_key_provider:
   query: >-
     .key_provider_clusters[] | {
@@ -7,7 +91,7 @@ community.vmware.vcenter_standard_key_provider:
         id: .key_id
       },
       facts: {
-        infra_type: "community.vmwarey",
+        infra_type: "jonnyfiveiq",
         infra_bucket: "Compute",
         device_type: "Resource"
       }
@@ -21,7 +105,21 @@ community.vmware.vmware_about_info:
         instance_uuid: .instance_uuid
       },
       facts: {
-        infra_type: "community.vmwarey",
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_all_snapshots_info:
+  query: >-
+    .vmware_all_snapshots_info[] | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -35,7 +133,7 @@ community.vmware.vmware_category:
         id: .category_id
       },
       facts: {
-        infra_type: "community.vmwarey",
+        infra_type: "jonnyfiveiq",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -49,7 +147,35 @@ community.vmware.vmware_category_info:
         id: .category_id
       },
       facts: {
-        infra_type: "community.vmwarey",
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_cfg_backup:
+  query: >-
+    . | select(. != null) | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_cluster_ha:
+  query: >-
+    . | select(. != null) | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -63,7 +189,21 @@ community.vmware.vmware_cluster_info:
         moid: .moid
       },
       facts: {
-        infra_type: "community.vmwarey",
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_cluster_vsan:
+  query: >-
+    . | select(. != null) | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -77,7 +217,7 @@ community.vmware.vmware_content_deploy_ovf_template:
         id: .vm_id
       },
       facts: {
-        infra_type: "community.vmwarey",
+        infra_type: "jonnyfiveiq",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -91,7 +231,7 @@ community.vmware.vmware_content_deploy_template:
         id: .vm_id
       },
       facts: {
-        infra_type: "community.vmwarey",
+        infra_type: "jonnyfiveiq",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -105,7 +245,7 @@ community.vmware.vmware_content_library_info:
         id: .library_id
       },
       facts: {
-        infra_type: "community.vmwarey",
+        infra_type: "jonnyfiveiq",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -119,7 +259,49 @@ community.vmware.vmware_content_library_manager:
         id: .library_id
       },
       facts: {
-        infra_type: "community.vmwarey",
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_custom_attribute:
+  query: >-
+    . | select(. != null) | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_custom_attribute_manager:
+  query: >-
+    . | select(. != null) | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_datacenter:
+  query: >-
+    . | select(. != null) | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -133,7 +315,49 @@ community.vmware.vmware_datacenter_info:
         moid: .moid
       },
       facts: {
-        infra_type: "community.vmwarey",
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_datastore:
+  query: >-
+    . | select(. != null) | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_datastore_cluster:
+  query: >-
+    . | select(. != null) | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_datastore_cluster_manager:
+  query: >-
+    . | select(. != null) | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -147,7 +371,163 @@ community.vmware.vmware_datastore_info:
         id: .vmfs_uuid
       },
       facts: {
-        infra_type: "community.vmwarey",
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_datastore_maintenancemode:
+  query: >-
+    .datastore_status | select(. != null) | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_deploy_ovf:
+  query: >-
+    .instance | select(. != null) | {
+      name: .moid,
+      canonical_facts: {
+        moid: .moid,
+        instance_uuid: .instance_uuid,
+        bios_uuid: .hw_product_uuid
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_drs_group:
+  query: >-
+    .drs_group_facts | select(. != null) | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_drs_group_info:
+  query: >-
+    .drs_group_info | select(. != null) | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_drs_group_manager:
+  query: >-
+    .drs_group_member_info | select(. != null) | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_drs_override:
+  query: >-
+    . | select(. != null) | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_drs_rule_info:
+  query: >-
+    .drs_rule_info | select(. != null) | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_dvs_host:
+  query: >-
+    . | select(. != null) | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_dvs_portgroup:
+  query: >-
+    . | select(. != null) | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_dvs_portgroup_find:
+  query: >-
+    .dvs_portgroups[] | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_dvs_portgroup_info:
+  query: >-
+    .dvs_portgroup_info | select(. != null) | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -161,7 +541,7 @@ community.vmware.vmware_dvswitch:
         id: .net_flow_observation_domain_id
       },
       facts: {
-        infra_type: "community.vmwarey",
+        infra_type: "jonnyfiveiq",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -175,7 +555,121 @@ community.vmware.vmware_dvswitch_info:
         uuid: .uuid
       },
       facts: {
-        infra_type: "community.vmwarey",
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_dvswitch_lacp:
+  query: >-
+    . | select(. != null) | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_dvswitch_nioc:
+  query: >-
+    .resources_changed[] | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_dvswitch_pvlans:
+  query: >-
+    . | select(. != null) | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_dvswitch_uplink_pg:
+  query: >-
+    . | select(. != null) | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_evc_mode:
+  query: >-
+    . | select(. != null) | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_export_ovf:
+  query: >-
+    .instance | select(. != null) | {
+      name: .moid,
+      canonical_facts: {
+        moid: .moid,
+        instance_uuid: .instance_uuid,
+        bios_uuid: .hw_product_uuid
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_first_class_disk:
+  query: >-
+    .first_class_disk | select(. != null) | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_first_class_disk_info:
+  query: >-
+    .first_class_disks[] | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -189,7 +683,121 @@ community.vmware.vmware_folder_info:
         moid: .moid
       },
       facts: {
-        infra_type: "community.vmwarey",
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_guest:
+  query: >-
+    .instance | select(. != null) | {
+      name: .moid,
+      canonical_facts: {
+        moid: .moid,
+        instance_uuid: .instance_uuid,
+        bios_uuid: .hw_product_uuid
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_guest_boot_info:
+  query: >-
+    .vm_boot_info | select(. != null) | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_guest_boot_manager:
+  query: >-
+    .vm_boot_status | select(. != null) | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_guest_controller:
+  query: >-
+    .disk_controller_status | select(. != null) | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_guest_cross_vc_clone:
+  query: >-
+    .vm_info | select(. != null) | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_guest_custom_attribute_defs:
+  query: >-
+    .custom_attribute_defs[] | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_guest_custom_attributes:
+  query: >-
+    .custom_attributes | select(. != null) | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_guest_customization_info:
+  query: >-
+    .custom_spec_info | select(. != null) | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -203,7 +811,7 @@ community.vmware.vmware_guest_disk:
         id: .backing_uuid
       },
       facts: {
-        infra_type: "community.vmwarey",
+        infra_type: "jonnyfiveiq",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -217,7 +825,35 @@ community.vmware.vmware_guest_disk_info:
         id: .backing_uuid
       },
       facts: {
-        infra_type: "community.vmwarey",
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_guest_file_operation:
+  query: >-
+    . | select(. != null) | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_guest_find:
+  query: >-
+    .folders[] | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -233,7 +869,7 @@ community.vmware.vmware_guest_info:
         moid: .moid
       },
       facts: {
-        infra_type: "community.vmwarey",
+        infra_type: "jonnyfiveiq",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -247,7 +883,7 @@ community.vmware.vmware_guest_instant_clone:
         instance_uuid: .instance_uuid
       },
       facts: {
-        infra_type: "community.vmwarey",
+        infra_type: "jonnyfiveiq",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -262,7 +898,77 @@ community.vmware.vmware_guest_move:
         instance_uuid: .instance_uuid
       },
       facts: {
-        infra_type: "community.vmwarey",
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_guest_network:
+  query: >-
+    .network_info[] | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_guest_powerstate:
+  query: >-
+    . | select(. != null) | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_guest_register_operation:
+  query: >-
+    . | select(. != null) | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_guest_screenshot:
+  query: >-
+    .screenshot_info | select(. != null) | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_guest_sendkey:
+  query: >-
+    .sendkey_info | select(. != null) | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -276,7 +982,7 @@ community.vmware.vmware_guest_serial_port:
         id: .serial_port_data
       },
       facts: {
-        infra_type: "community.vmwarey",
+        infra_type: "jonnyfiveiq",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -290,7 +996,7 @@ community.vmware.vmware_guest_snapshot:
         id: .id
       },
       facts: {
-        infra_type: "community.vmwarey",
+        infra_type: "jonnyfiveiq",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -304,7 +1010,21 @@ community.vmware.vmware_guest_snapshot_info:
         id: .id
       },
       facts: {
-        infra_type: "community.vmwarey",
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_guest_storage_policy:
+  query: >-
+    .changed_policies | select(. != null) | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -318,7 +1038,277 @@ community.vmware.vmware_guest_tools_info:
         id: .vm_uuid
       },
       facts: {
-        infra_type: "community.vmwarey",
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_guest_tools_upgrade:
+  query: >-
+    . | select(. != null) | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_guest_tools_wait:
+  query: >-
+    .instance | select(. != null) | {
+      name: .moid,
+      canonical_facts: {
+        moid: .moid,
+        instance_uuid: .instance_uuid,
+        bios_uuid: .hw_product_uuid
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_guest_tpm:
+  query: >-
+    .instance | select(. != null) | {
+      name: .moid,
+      canonical_facts: {
+        moid: .moid,
+        instance_uuid: .instance_uuid,
+        bios_uuid: .hw_product_uuid
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_guest_vgpu:
+  query: >-
+    .vgpu_info | select(. != null) | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_guest_vgpu_info:
+  query: >-
+    .vgpu_info[] | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_guest_video:
+  query: >-
+    .video_status | select(. != null) | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_host:
+  query: >-
+    . | select(. != null) | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_host_acceptance:
+  query: >-
+    .facts | select(. != null) | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_host_acceptance_info:
+  query: >-
+    .host_acceptance_info | select(. != null) | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_host_active_directory:
+  query: >-
+    .results | select(. != null) | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_host_auto_start:
+  query: >-
+    .system_defaults_config | select(. != null) | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_host_capability_info:
+  query: >-
+    .hosts_capability_info | select(. != null) | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_host_config_info:
+  query: >-
+    .hosts_info | select(. != null) | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_host_config_manager:
+  query: >-
+    . | select(. != null) | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_host_custom_attributes:
+  query: >-
+    .custom_attributes | select(. != null) | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_host_datastore:
+  query: >-
+    . | select(. != null) | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_host_disk_info:
+  query: >-
+    .hosts_disk_info[] | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_host_dns:
+  query: >-
+    .dns_config_result | select(. != null) | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_host_dns_info:
+  query: >-
+    .hosts_dns_info | select(. != null) | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -332,7 +1322,175 @@ community.vmware.vmware_host_facts:
         id: .ansible_uuid
       },
       facts: {
-        infra_type: "community.vmwarey",
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_host_feature_info:
+  query: >-
+    .hosts_feature_info | select(. != null) | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_host_firewall_info:
+  query: >-
+    .hosts_firewall_info | select(. != null) | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_host_firewall_manager:
+  query: >-
+    .rule_set_state | select(. != null) | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_host_graphics:
+  query: >-
+    .results | select(. != null) | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_host_hyperthreading:
+  query: >-
+    .results | select(. != null) | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_host_ipv6:
+  query: >-
+    .result | select(. != null) | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_host_iscsi:
+  query: >-
+    .iscsi_properties | select(. != null) | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_host_iscsi_info:
+  query: >-
+    .iscsi_properties | select(. != null) | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_host_kernel_manager:
+  query: >-
+    .host_kernel_status | select(. != null) | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_host_lockdown:
+  query: >-
+    .results | select(. != null) | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_host_lockdown_exceptions:
+  query: >-
+    .results | select(. != null) | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_host_logbundle:
+  query: >-
+    . | select(. != null) | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -346,7 +1504,245 @@ community.vmware.vmware_host_logbundle_info:
         id: .id
       },
       facts: {
-        infra_type: "community.vmwarey",
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_host_ntp:
+  query: >-
+    .host_ntp_status | select(. != null) | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_host_ntp_info:
+  query: >-
+    .hosts_ntp_info | select(. != null) | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_host_package_info:
+  query: >-
+    .hosts_package_info | select(. != null) | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_host_passthrough:
+  query: >-
+    .passthrough_configs[] | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_host_powermgmt_policy:
+  query: >-
+    .result | select(. != null) | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_host_powerstate:
+  query: >-
+    .result | select(. != null) | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_host_scanhba:
+  query: >-
+    .result | select(. != null) | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_host_scsidisk_info:
+  query: >-
+    .hosts_scsidisk_info | select(. != null) | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_host_service_info:
+  query: >-
+    .host_service_info | select(. != null) | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_host_service_manager:
+  query: >-
+    . | select(. != null) | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_host_snmp:
+  query: >-
+    .results | select(. != null) | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_host_sriov:
+  query: >-
+    .host_sriov_diff | select(. != null) | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_host_ssl_info:
+  query: >-
+    .host_ssl_info | select(. != null) | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_host_tcpip_stacks:
+  query: >-
+    .default | select(. != null) | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_host_user_manager:
+  query: >-
+    . | select(. != null) | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_host_vmhba_info:
+  query: >-
+    .hosts_vmhbas_info | select(. != null) | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_host_vmnic_info:
+  query: >-
+    .hosts_vmnics_info | select(. != null) | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -360,7 +1756,7 @@ community.vmware.vmware_local_role_info:
         id: .role_id
       },
       facts: {
-        infra_type: "community.vmwarey",
+        infra_type: "jonnyfiveiq",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -374,7 +1770,7 @@ community.vmware.vmware_local_role_manager:
         id: .role_id
       },
       facts: {
-        infra_type: "community.vmwarey",
+        infra_type: "jonnyfiveiq",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -388,7 +1784,91 @@ community.vmware.vmware_local_user_info:
         id: .user_id
       },
       facts: {
-        infra_type: "community.vmwarey",
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_local_user_manager:
+  query: >-
+    . | select(. != null) | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_maintenancemode:
+  query: >-
+    . | select(. != null) | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_migrate_vmk:
+  query: >-
+    . | select(. != null) | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_object_custom_attributes_info:
+  query: >-
+    .custom_attributes[] | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_object_rename:
+  query: >-
+    .rename_status | select(. != null) | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_object_role_permission:
+  query: >-
+    . | select(. != null) | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -402,7 +1882,93 @@ community.vmware.vmware_object_role_permission_info:
         id: .role_id
       },
       facts: {
-        infra_type: "community.vmwarey",
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_portgroup:
+  query: >-
+    .result | select(. != null) | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_portgroup_info:
+  query: >-
+    .hosts_portgroup_info | select(. != null) | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_recommended_datastore:
+  query: >-
+    . | select(. != null) | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_resource_pool:
+  query: >-
+    .instance | select(. != null) | {
+      name: .moid,
+      canonical_facts: {
+        moid: .moid,
+        instance_uuid: .instance_uuid,
+        bios_uuid: .hw_product_uuid
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_resource_pool_info:
+  query: >-
+    .resource_pool_info[] | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_sdrs_vm_overrides_info:
+  query: >-
+    .result | select(. != null) | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -416,7 +1982,7 @@ community.vmware.vmware_tag:
         id: .tag_id
       },
       facts: {
-        infra_type: "community.vmwarey",
+        infra_type: "jonnyfiveiq",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -430,7 +1996,21 @@ community.vmware.vmware_tag_info:
         id: .tag_category_id
       },
       facts: {
-        infra_type: "community.vmwarey",
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_tag_manager:
+  query: >-
+    .tag_status[] | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -444,7 +2024,49 @@ community.vmware.vmware_target_canonical_info:
         id: .target_lun_uuid
       },
       facts: {
-        infra_type: "community.vmwarey",
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_vasa:
+  query: >-
+    . | select(. != null) | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_vasa_info:
+  query: >-
+    .vasa_providers[] | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_vc_infraprofile_info:
+  query: >-
+    .list_infra[] | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -458,7 +2080,65 @@ community.vmware.vmware_vcenter_settings:
         id: .runtime_unique_id
       },
       facts: {
-        infra_type: "community.vmwarey",
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_vcenter_settings_info:
+  query: >-
+    .vcenter_config_info | select(. != null) | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_vcenter_statistics:
+  query: >-
+    .results | select(. != null) | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_vm_config_option:
+  query: >-
+    .instance | select(. != null) | {
+      name: .moid,
+      canonical_facts: {
+        moid: .moid,
+        instance_uuid: .instance_uuid,
+        bios_uuid: .hw_product_uuid
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_vm_host_drs_rule:
+  query: >-
+    . | select(. != null) | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -473,7 +2153,7 @@ community.vmware.vmware_vm_info:
         moid: .moid
       },
       facts: {
-        infra_type: "community.vmwarey",
+        infra_type: "jonnyfiveiq",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -487,7 +2167,7 @@ community.vmware.vmware_vm_shell:
         uuid: .uuid
       },
       facts: {
-        infra_type: "community.vmwarey",
+        infra_type: "jonnyfiveiq",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -501,7 +2181,7 @@ community.vmware.vmware_vm_storage_policy:
         id: .id
       },
       facts: {
-        infra_type: "community.vmwarey",
+        infra_type: "jonnyfiveiq",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -515,7 +2195,7 @@ community.vmware.vmware_vm_storage_policy_info:
         id: .id
       },
       facts: {
-        infra_type: "community.vmwarey",
+        infra_type: "jonnyfiveiq",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -529,9 +2209,204 @@ community.vmware.vmware_vm_vm_drs_rule:
         id: .rule_uuid
       },
       facts: {
-        infra_type: "community.vmwarey",
+        infra_type: "jonnyfiveiq",
         infra_bucket: "Compute",
         device_type: "VM"
       }
     }
 
+community.vmware.vmware_vm_vss_dvs_migrate:
+  query: >-
+    . | select(. != null) | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_vmkernel:
+  query: >-
+    .result | select(. != null) | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_vmkernel_info:
+  query: >-
+    .host_vmk_info | select(. != null) | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_vmotion:
+  query: >-
+    . | select(. != null) | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_vsan_cluster:
+  query: >-
+    . | select(. != null) | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_vsan_hcl_db:
+  query: >-
+    . | select(. != null) | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_vsan_health_info:
+  query: >-
+    .vsan_health_info | select(. != null) | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_vsan_release_catalog:
+  query: >-
+    . | select(. != null) | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_vspan_session:
+  query: >-
+    . | select(. != null) | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_vswitch:
+  query: >-
+    . | select(. != null) | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vmware_vswitch_info:
+  query: >-
+    .hosts_vswitch_info | select(. != null) | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "VM"
+      }
+    }
+
+community.vmware.vsan_health_silent_checks:
+  query: >-
+    . | select(. != null) | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "Resource"
+      }
+    }
+
+community.vmware.vsphere_copy:
+  query: >-
+    . | select(. != null) | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "Resource"
+      }
+    }
+
+community.vmware.vsphere_file:
+  query: >-
+    . | select(. != null) | {
+      name: .id,
+      canonical_facts: {
+        id: .id
+      },
+      facts: {
+        infra_type: "jonnyfiveiq",
+        infra_bucket: "Compute",
+        device_type: "Resource"
+      }
+    }
