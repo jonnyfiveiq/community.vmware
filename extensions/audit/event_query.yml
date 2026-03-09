@@ -8,7 +8,7 @@ community.vmware.vcenter_domain_user_group_info:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "Resource"
       }
@@ -22,7 +22,7 @@ community.vmware.vcenter_extension:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "Resource"
       }
@@ -36,7 +36,7 @@ community.vmware.vcenter_extension_info:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "Resource"
       }
@@ -50,7 +50,7 @@ community.vmware.vcenter_folder:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Management",
         device_type: "Folder"
       }
@@ -64,7 +64,7 @@ community.vmware.vcenter_license:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "Resource"
       }
@@ -78,7 +78,7 @@ community.vmware.vcenter_root_password_expiration:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "Resource"
       }
@@ -92,7 +92,7 @@ community.vmware.vcenter_standard_key_provider:
         id: .key_id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "Resource"
       }
@@ -106,7 +106,7 @@ community.vmware.vmware_about_info:
         instance_uuid: .instance_uuid
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -120,7 +120,7 @@ community.vmware.vmware_all_snapshots_info:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -134,7 +134,7 @@ community.vmware.vmware_category:
         id: .category_id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -148,7 +148,7 @@ community.vmware.vmware_category_info:
         id: .category_id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -162,7 +162,7 @@ community.vmware.vmware_cfg_backup:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -176,7 +176,7 @@ community.vmware.vmware_cluster_ha:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -190,7 +190,7 @@ community.vmware.vmware_cluster_info:
         moid: .moid
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -204,7 +204,7 @@ community.vmware.vmware_cluster_vsan:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -218,7 +218,7 @@ community.vmware.vmware_content_deploy_ovf_template:
         id: .vm_id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -232,7 +232,7 @@ community.vmware.vmware_content_deploy_template:
         id: .vm_id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -246,7 +246,7 @@ community.vmware.vmware_content_library_info:
         id: .library_id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -260,7 +260,7 @@ community.vmware.vmware_content_library_manager:
         id: .library_id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -274,7 +274,7 @@ community.vmware.vmware_custom_attribute:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -288,7 +288,7 @@ community.vmware.vmware_custom_attribute_manager:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -302,7 +302,7 @@ community.vmware.vmware_datacenter:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -316,7 +316,7 @@ community.vmware.vmware_datacenter_info:
         moid: .moid
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -330,7 +330,7 @@ community.vmware.vmware_datastore:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -344,7 +344,7 @@ community.vmware.vmware_datastore_cluster:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -358,7 +358,7 @@ community.vmware.vmware_datastore_cluster_manager:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -372,7 +372,7 @@ community.vmware.vmware_datastore_info:
         id: .vmfs_uuid
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -386,7 +386,7 @@ community.vmware.vmware_datastore_maintenancemode:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -400,7 +400,7 @@ community.vmware.vmware_deploy_ovf:
         moid: .moid
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -414,7 +414,7 @@ community.vmware.vmware_drs_group:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -428,7 +428,7 @@ community.vmware.vmware_drs_group_info:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -442,7 +442,7 @@ community.vmware.vmware_drs_group_manager:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -456,7 +456,7 @@ community.vmware.vmware_drs_override:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -470,7 +470,7 @@ community.vmware.vmware_drs_rule_info:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -484,7 +484,7 @@ community.vmware.vmware_dvs_host:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -498,7 +498,7 @@ community.vmware.vmware_dvs_portgroup:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -512,7 +512,7 @@ community.vmware.vmware_dvs_portgroup_find:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -526,7 +526,7 @@ community.vmware.vmware_dvs_portgroup_info:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -540,7 +540,7 @@ community.vmware.vmware_dvswitch:
         id: .net_flow_observation_domain_id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -554,7 +554,7 @@ community.vmware.vmware_dvswitch_info:
         uuid: .uuid
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -568,7 +568,7 @@ community.vmware.vmware_dvswitch_lacp:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -582,7 +582,7 @@ community.vmware.vmware_dvswitch_nioc:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -596,7 +596,7 @@ community.vmware.vmware_dvswitch_pvlans:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -610,7 +610,7 @@ community.vmware.vmware_dvswitch_uplink_pg:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -624,7 +624,7 @@ community.vmware.vmware_evc_mode:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -638,7 +638,7 @@ community.vmware.vmware_export_ovf:
         moid: .moid
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -652,7 +652,7 @@ community.vmware.vmware_first_class_disk:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -666,7 +666,7 @@ community.vmware.vmware_first_class_disk_info:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -680,7 +680,7 @@ community.vmware.vmware_folder_info:
         moid: .moid
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -694,7 +694,7 @@ community.vmware.vmware_guest:
         moid: .moid
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -708,7 +708,7 @@ community.vmware.vmware_guest_boot_info:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -722,7 +722,7 @@ community.vmware.vmware_guest_boot_manager:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -736,7 +736,7 @@ community.vmware.vmware_guest_controller:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -750,7 +750,7 @@ community.vmware.vmware_guest_cross_vc_clone:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -764,7 +764,7 @@ community.vmware.vmware_guest_custom_attribute_defs:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -778,7 +778,7 @@ community.vmware.vmware_guest_custom_attributes:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -792,7 +792,7 @@ community.vmware.vmware_guest_customization_info:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -806,7 +806,7 @@ community.vmware.vmware_guest_disk:
         id: .backing_uuid
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -820,7 +820,7 @@ community.vmware.vmware_guest_disk_info:
         id: .backing_uuid
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -834,7 +834,7 @@ community.vmware.vmware_guest_file_operation:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -848,7 +848,7 @@ community.vmware.vmware_guest_find:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -862,7 +862,7 @@ community.vmware.vmware_guest_info:
         moid: .moid
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -876,7 +876,7 @@ community.vmware.vmware_guest_instant_clone:
         instance_uuid: .instance_uuid
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -890,7 +890,7 @@ community.vmware.vmware_guest_move:
         instance_uuid: .instance_uuid
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -904,7 +904,7 @@ community.vmware.vmware_guest_network:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -918,7 +918,7 @@ community.vmware.vmware_guest_powerstate:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -932,7 +932,7 @@ community.vmware.vmware_guest_register_operation:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -946,7 +946,7 @@ community.vmware.vmware_guest_screenshot:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -960,7 +960,7 @@ community.vmware.vmware_guest_sendkey:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -974,7 +974,7 @@ community.vmware.vmware_guest_serial_port:
         id: .serial_port_data
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -988,7 +988,7 @@ community.vmware.vmware_guest_snapshot:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -1002,7 +1002,7 @@ community.vmware.vmware_guest_snapshot_info:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -1016,7 +1016,7 @@ community.vmware.vmware_guest_storage_policy:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -1030,7 +1030,7 @@ community.vmware.vmware_guest_tools_info:
         id: .vm_uuid
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -1044,7 +1044,7 @@ community.vmware.vmware_guest_tools_upgrade:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -1058,7 +1058,7 @@ community.vmware.vmware_guest_tools_wait:
         moid: .moid
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -1072,7 +1072,7 @@ community.vmware.vmware_guest_tpm:
         moid: .moid
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -1086,7 +1086,7 @@ community.vmware.vmware_guest_vgpu:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -1100,7 +1100,7 @@ community.vmware.vmware_guest_vgpu_info:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -1114,7 +1114,7 @@ community.vmware.vmware_guest_video:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -1128,7 +1128,7 @@ community.vmware.vmware_host:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -1142,7 +1142,7 @@ community.vmware.vmware_host_acceptance:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -1156,7 +1156,7 @@ community.vmware.vmware_host_acceptance_info:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -1170,7 +1170,7 @@ community.vmware.vmware_host_active_directory:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -1184,7 +1184,7 @@ community.vmware.vmware_host_auto_start:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -1198,7 +1198,7 @@ community.vmware.vmware_host_capability_info:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -1212,7 +1212,7 @@ community.vmware.vmware_host_config_info:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -1226,7 +1226,7 @@ community.vmware.vmware_host_config_manager:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -1240,7 +1240,7 @@ community.vmware.vmware_host_custom_attributes:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -1254,7 +1254,7 @@ community.vmware.vmware_host_datastore:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -1268,7 +1268,7 @@ community.vmware.vmware_host_disk_info:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -1282,7 +1282,7 @@ community.vmware.vmware_host_dns:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -1296,7 +1296,7 @@ community.vmware.vmware_host_dns_info:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -1310,7 +1310,7 @@ community.vmware.vmware_host_facts:
         id: .ansible_uuid
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -1324,7 +1324,7 @@ community.vmware.vmware_host_feature_info:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -1338,7 +1338,7 @@ community.vmware.vmware_host_firewall_info:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -1352,7 +1352,7 @@ community.vmware.vmware_host_firewall_manager:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -1366,7 +1366,7 @@ community.vmware.vmware_host_graphics:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -1380,7 +1380,7 @@ community.vmware.vmware_host_hyperthreading:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -1394,7 +1394,7 @@ community.vmware.vmware_host_ipv6:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -1408,7 +1408,7 @@ community.vmware.vmware_host_iscsi:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -1422,7 +1422,7 @@ community.vmware.vmware_host_iscsi_info:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -1436,7 +1436,7 @@ community.vmware.vmware_host_kernel_manager:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -1450,7 +1450,7 @@ community.vmware.vmware_host_lockdown:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -1464,7 +1464,7 @@ community.vmware.vmware_host_lockdown_exceptions:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -1478,7 +1478,7 @@ community.vmware.vmware_host_logbundle:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -1492,7 +1492,7 @@ community.vmware.vmware_host_logbundle_info:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -1506,7 +1506,7 @@ community.vmware.vmware_host_ntp:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -1520,7 +1520,7 @@ community.vmware.vmware_host_ntp_info:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -1534,7 +1534,7 @@ community.vmware.vmware_host_package_info:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -1548,7 +1548,7 @@ community.vmware.vmware_host_passthrough:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -1562,7 +1562,7 @@ community.vmware.vmware_host_powermgmt_policy:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -1576,7 +1576,7 @@ community.vmware.vmware_host_powerstate:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -1590,7 +1590,7 @@ community.vmware.vmware_host_scanhba:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -1604,7 +1604,7 @@ community.vmware.vmware_host_scsidisk_info:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -1618,7 +1618,7 @@ community.vmware.vmware_host_service_info:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -1632,7 +1632,7 @@ community.vmware.vmware_host_service_manager:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -1646,7 +1646,7 @@ community.vmware.vmware_host_snmp:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -1660,7 +1660,7 @@ community.vmware.vmware_host_sriov:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -1674,7 +1674,7 @@ community.vmware.vmware_host_ssl_info:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -1688,7 +1688,7 @@ community.vmware.vmware_host_tcpip_stacks:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -1702,7 +1702,7 @@ community.vmware.vmware_host_user_manager:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -1716,7 +1716,7 @@ community.vmware.vmware_host_vmhba_info:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -1730,7 +1730,7 @@ community.vmware.vmware_host_vmnic_info:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -1744,7 +1744,7 @@ community.vmware.vmware_local_role_info:
         id: .role_id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -1758,7 +1758,7 @@ community.vmware.vmware_local_role_manager:
         id: .role_id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -1772,7 +1772,7 @@ community.vmware.vmware_local_user_info:
         id: .user_id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -1786,7 +1786,7 @@ community.vmware.vmware_local_user_manager:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -1800,7 +1800,7 @@ community.vmware.vmware_maintenancemode:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -1814,7 +1814,7 @@ community.vmware.vmware_migrate_vmk:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -1828,7 +1828,7 @@ community.vmware.vmware_object_custom_attributes_info:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -1842,7 +1842,7 @@ community.vmware.vmware_object_rename:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -1856,7 +1856,7 @@ community.vmware.vmware_object_role_permission:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -1870,7 +1870,7 @@ community.vmware.vmware_object_role_permission_info:
         id: .role_id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -1884,7 +1884,7 @@ community.vmware.vmware_portgroup:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -1898,7 +1898,7 @@ community.vmware.vmware_portgroup_info:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -1912,7 +1912,7 @@ community.vmware.vmware_recommended_datastore:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -1926,7 +1926,7 @@ community.vmware.vmware_resource_pool:
         moid: .moid
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -1940,7 +1940,7 @@ community.vmware.vmware_resource_pool_info:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -1954,7 +1954,7 @@ community.vmware.vmware_sdrs_vm_overrides_info:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -1968,7 +1968,7 @@ community.vmware.vmware_tag:
         id: .tag_id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -1982,7 +1982,7 @@ community.vmware.vmware_tag_info:
         id: .tag_category_id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -1996,7 +1996,7 @@ community.vmware.vmware_tag_manager:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -2010,7 +2010,7 @@ community.vmware.vmware_target_canonical_info:
         id: .target_lun_uuid
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -2024,7 +2024,7 @@ community.vmware.vmware_vasa:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -2038,7 +2038,7 @@ community.vmware.vmware_vasa_info:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -2052,7 +2052,7 @@ community.vmware.vmware_vc_infraprofile_info:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -2066,7 +2066,7 @@ community.vmware.vmware_vcenter_settings:
         id: .runtime_unique_id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -2080,7 +2080,7 @@ community.vmware.vmware_vcenter_settings_info:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -2094,7 +2094,7 @@ community.vmware.vmware_vcenter_statistics:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -2108,7 +2108,7 @@ community.vmware.vmware_vm_config_option:
         moid: .moid
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -2122,7 +2122,7 @@ community.vmware.vmware_vm_host_drs_rule:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -2136,7 +2136,7 @@ community.vmware.vmware_vm_info:
         moid: .moid
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -2150,7 +2150,7 @@ community.vmware.vmware_vm_shell:
         uuid: .uuid
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -2164,7 +2164,7 @@ community.vmware.vmware_vm_storage_policy:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -2178,7 +2178,7 @@ community.vmware.vmware_vm_storage_policy_info:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -2192,7 +2192,7 @@ community.vmware.vmware_vm_vm_drs_rule:
         id: .rule_uuid
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -2206,7 +2206,7 @@ community.vmware.vmware_vm_vss_dvs_migrate:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -2220,7 +2220,7 @@ community.vmware.vmware_vmkernel:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -2234,7 +2234,7 @@ community.vmware.vmware_vmkernel_info:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -2248,7 +2248,7 @@ community.vmware.vmware_vmotion:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -2262,7 +2262,7 @@ community.vmware.vmware_vsan_cluster:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -2276,7 +2276,7 @@ community.vmware.vmware_vsan_hcl_db:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -2290,7 +2290,7 @@ community.vmware.vmware_vsan_health_info:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -2304,7 +2304,7 @@ community.vmware.vmware_vsan_release_catalog:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -2318,7 +2318,7 @@ community.vmware.vmware_vspan_session:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -2332,7 +2332,7 @@ community.vmware.vmware_vswitch:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -2346,7 +2346,7 @@ community.vmware.vmware_vswitch_info:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "VM"
       }
@@ -2360,7 +2360,7 @@ community.vmware.vsan_health_silent_checks:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "Resource"
       }
@@ -2374,7 +2374,7 @@ community.vmware.vsphere_copy:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "Resource"
       }
@@ -2388,7 +2388,7 @@ community.vmware.vsphere_file:
         id: .id
       },
       facts: {
-        infra_type: "PrivateCloud",
+        infra_type: "PrivateCloudCOMMUNITY",
         infra_bucket: "Compute",
         device_type: "Resource"
       }
